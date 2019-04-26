@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="63efb228-ab49-49d7-948c-b829cae5e980" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Mandelbrot" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Mandelbrot/Testing/Testing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="118" column="57" lean-forward="true" selection-start-line="118" selection-start-column="57" selection-end-line="118" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#634#737#0" />
+                <element signature="e#743#903#0" />
+                <element signature="e#1169#1321#0" />
+                <element signature="e#1322#1385#0" />
+                <element signature="e#2222#2302#0" />
+                <element signature="e#5038#6379#0" />
+                <element signature="e#5043#5421#0" />
+                <element signature="e#6330#6388#0" />
+                <element signature="e#6330#7217#0" />
+                <element signature="e#7223#8123#0" />
+                <element signature="e#8703#10889#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>mouseWhee</find>
+      <find>maxIter</find>
+      <find>n</find>
+      <find>scl</find>
+      <find>newScale</find>
+      <find>2</find>
+      <find>println(</find>
+      <find>;</find>
+      <find>,</find>
+      <find>2.160</find>
+      <find>if (key ==</find>
+      <find>) {</find>
+      <find>}</find>
+      <find>textS</find>
+      <find>HSB</find>
+      <find>rectM</find>
+      <find>newY</find>
+      <find>float</find>
+      <find>new</find>
+      <find>BigDecimal</find>
+      <find>+</find>
+      <find>double</find>
+      <find>dist</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>newScale</replace>
+      <replace>scl</replace>
+      <replace>3.840</replace>
+      <replace>2.160</replace>
+      <replace>+</replace>
+      <replace>wScale</replace>
+      <replace>hScale</replace>
+      <replace>case(</replace>
+      <replace>) :</replace>
+      <replace>transY</replace>
+      <replace>imag</replace>
+      <replace>double</replace>
+      <replace>+ df.format(</replace>
+      <replace>float</replace>
+      <replace>quad</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Mandelbrot/Magic/Cx.java" />
+        <option value="$PROJECT_DIR$/Mandelbrot/Magic/Complex.java" />
+        <option value="$PROJECT_DIR$/Mandelbrot/Magic/Point.java" />
+        <option value="$PROJECT_DIR$/Mandelbrot/Magic/Mandelbrot.java" />
+        <option value="$PROJECT_DIR$/Mandelbrot/Magic3/Mandelbrot.java" />
+        <option value="$PROJECT_DIR$/Mandelbrot/Magic3/Complex.java" />
+        <option value="$PROJECT_DIR$/Mandelbrot/Magic2/tst.java" />
+        <option value="$PROJECT_DIR$/Mandelbrot/Magic2/Mandelbrot.java" />
+        <option value="$PROJECT_DIR$/Mandelbrot/Testing/Testing.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="95" />
+    <option name="width" value="1920" />
+    <option name="height" value="2060" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Mandelbrot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mandelbrot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mandelbrot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mandelbrot" type="462c0819:PsiDirectoryNode" />
+              <item name="Magic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mandelbrot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mandelbrot" type="462c0819:PsiDirectoryNode" />
+              <item name="Magic2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mandelbrot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mandelbrot" type="462c0819:PsiDirectoryNode" />
+              <item name="Testing" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Mandelbrot/Magic3" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15332031" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\happy\OneDrive\Desktop\Mandelbrot\Mandelbrot\Testing" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\happy\OneDrive\Desktop\Mandelbrot\Mandelbrot\Magic3" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.testMe">
+    <configuration name="runMe" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Mandelbrot" />
+      <module name="Mandelbrot" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testMe" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Testing" />
+      <module name="Mandelbrot" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.runMe" />
+      <item itemvalue="Application.testMe" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="63efb228-ab49-49d7-948c-b829cae5e980" name="Default Changelist" comment="" />
+      <created>1555724418955</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1555724418955</updated>
+      <workItem from="1555724426317" duration="531000" />
+      <workItem from="1555725002682" duration="84213000" />
+      <workItem from="1556048995871" duration="5507000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="90251000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49887133" visible="true" weight="0.17639168" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.24949698" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" sideWeight="0.5011287" side_tool="true" weight="0.25754526" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.301273" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32956153" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32956153" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$PROJECT_DIR$/processing-core.jar!/processing/core/PApplet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="933" column="25" selection-start-line="933" selection-start-column="16" selection-end-line="933" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mandelbrot/Magic/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+          <folding>
+            <element signature="e#335#336#0" expanded="true" />
+            <element signature="e#368#369#0" expanded="true" />
+            <element signature="e#420#421#0" expanded="true" />
+            <element signature="e#441#442#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mandelbrot/Magic/Mandelbrot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mandelbrot/Magic3/Mandelbrot.java" />
+    <entry file="file://$PROJECT_DIR$/Mandelbrot/Magic3/Complex.java" />
+    <entry file="file://$PROJECT_DIR$/Mandelbrot/Magic/Complex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="55" column="4" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mandelbrot/Magic2/Mandelbrot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="162" selection-start-line="162" selection-end-line="186" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mandelbrot/Testing/Testing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="118" column="57" lean-forward="true" selection-start-line="118" selection-start-column="57" selection-end-line="118" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#634#737#0" />
+            <element signature="e#743#903#0" />
+            <element signature="e#1169#1321#0" />
+            <element signature="e#1322#1385#0" />
+            <element signature="e#2222#2302#0" />
+            <element signature="e#5038#6379#0" />
+            <element signature="e#5043#5421#0" />
+            <element signature="e#6330#6388#0" />
+            <element signature="e#6330#7217#0" />
+            <element signature="e#7223#8123#0" />
+            <element signature="e#8703#10889#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Mandelbrot</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>processing-core</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
