@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63efb228-ab49-49d7-948c-b829cae5e980" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mandelbrot/Magic/Complex.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Magic/Mandelbrot.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Mandelbrot/Magic/Mandelbrot.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mandelbrot/Magic/Mandelbrot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mandelbrot/Magic/Point.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mandelbrot/Magic2/Mandelbrot.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Mandelbrot/Mandelbrot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Mandelbrot/Mandelbrot.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mandelbrot/Testing/Testing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Mandelbrot/Testing.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,14 +22,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mandelbrot/Magic/Mandelbrot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="319" column="61" selection-start-line="319" selection-start-column="61" selection-end-line="319" selection-end-column="61" />
+            <state relative-caret-position="189">
+              <caret line="352" column="15" selection-start-line="352" selection-start-column="15" selection-end-line="352" selection-end-column="15" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#1058#1217#0" />
                 <element signature="e#1129#1172#1" />
+                <element signature="e#1222#1325#0" />
                 <element signature="e#1331#1535#0" />
                 <element signature="e#1541#2183#0" />
                 <element signature="e#1604#1955#1" />
@@ -49,7 +45,6 @@
                 <element signature="e#2450#2668#1" />
                 <element signature="e#2674#2830#1" />
                 <element signature="e#2907#2948#0" />
-                <element signature="e#2953#4761#0" />
                 <element signature="e#3382#4506#1" />
                 <element signature="e#3458#4496#1" />
                 <element signature="e#3485#3634#1" />
@@ -64,7 +59,9 @@
                 <element signature="e#5270#5505#1" />
                 <element signature="e#5314#5355#1" />
                 <element signature="e#5537#5755#0" />
+                <element signature="e#6130#6131#0" expanded="true" />
                 <element signature="e#5815#5857#0" />
+                <element signature="e#6171#6172#0" expanded="true" />
                 <element signature="e#5862#7436#0" />
                 <element signature="e#5955#6142#1" />
                 <element signature="e#6147#6209#1" />
@@ -80,24 +77,43 @@
                 <element signature="e#8246#9792#1" />
                 <element signature="e#8275#9757#0" />
                 <element signature="e#9835#9879#0" />
+                <element signature="e#10227#10228#0" expanded="true" />
                 <element signature="e#9926#10013#0" />
+                <element signature="e#10313#10314#0" expanded="true" />
+                <element signature="e#10348#10349#0" expanded="true" />
                 <element signature="e#10047#10137#0" />
+                <element signature="e#10437#10438#0" expanded="true" />
+                <element signature="e#10473#10474#0" expanded="true" />
                 <element signature="e#10172#10230#0" />
+                <element signature="e#10530#10531#0" expanded="true" />
+                <element signature="e#10566#10567#0" expanded="true" />
                 <element signature="e#10265#10325#0" />
+                <element signature="e#10625#10626#0" expanded="true" />
                 <element signature="e#10387#10441#1" />
+                <element signature="e#10716#10717#0" expanded="true" />
                 <element signature="e#10479#10534#1" />
-                <element signature="e#10572#10802#1" />
-                <element signature="e#10638#10716#1" />
-                <element signature="e#10720#10792#1" />
-                <element signature="e#11202#11293#0" />
-                <element signature="e#11316#11376#0" />
-                <element signature="e#11565#11660#1" />
-                <element signature="e#11665#11754#1" />
+                <element signature="e#10809#10810#0" expanded="true" />
+                <element signature="e#10644#10705#0" />
+                <element signature="e#10741#10819#1" />
+                <element signature="e#10823#10895#1" />
                 <element signature="e#11833#11928#1" />
                 <element signature="e#11933#12022#1" />
+                <element signature="e#13980#14029#1" />
+                <element signature="e#14033#14080#1" />
+                <element signature="e#14154#14203#1" />
+                <element signature="e#14208#14253#1" />
                 <element signature="e#13951#14039#1" />
                 <element signature="e#14044#14126#1" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Mandelbrot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -141,6 +157,7 @@
       <find>text</find>
       <find>df.format</find>
       <find>Testin</find>
+      <find>\\</find>
     </findStrings>
     <replaceStrings>
       <replace>newScale</replace>
@@ -190,22 +207,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Mandelbrot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mandelbrot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mandelbrot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mandelbrot" type="462c0819:PsiDirectoryNode" />
-              <item name="Magic" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
@@ -219,7 +221,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/processing-core.jar!/" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -230,7 +232,7 @@
     <property name="project.structure.proportion" value="0.15332031" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -299,17 +301,34 @@
       <workItem from="1556247603254" duration="2023000" />
       <workItem from="1556296850748" duration="5988000" />
       <workItem from="1556400733785" duration="12995000" />
-      <workItem from="1556414254785" duration="2108000" />
+      <workItem from="1556414254785" duration="7097000" />
     </task>
+    <task id="LOCAL-00001" summary="Pretty well off rendering fullscreen">
+      <created>1556416462556</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1556416462556</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115395000" />
+    <option name="totallyTimeSpent" value="120384000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49887133" visible="true" weight="0.1898055" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49887133" visible="true" weight="0.1898055" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24949698" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -320,13 +339,13 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49966466" weight="0.32956153" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49966466" weight="0.32956153" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32956153" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32956153" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32956153" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50033534" side_tool="true" weight="0.32956153" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49899396" weight="0.32956153" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -338,6 +357,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Pretty well off rendering fullscreen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pretty well off rendering fullscreen" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$PROJECT_DIR$/processing-core.jar!/processing/core/PApplet.class">
@@ -472,11 +495,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Mandelbrot/Magic/Mandelbrot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="319" column="61" selection-start-line="319" selection-start-column="61" selection-end-line="319" selection-end-column="61" />
+        <state relative-caret-position="189">
+          <caret line="352" column="15" selection-start-line="352" selection-start-column="15" selection-end-line="352" selection-end-column="15" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="e#1058#1217#0" />
             <element signature="e#1129#1172#1" />
+            <element signature="e#1222#1325#0" />
             <element signature="e#1331#1535#0" />
             <element signature="e#1541#2183#0" />
             <element signature="e#1604#1955#1" />
@@ -490,7 +515,6 @@
             <element signature="e#2450#2668#1" />
             <element signature="e#2674#2830#1" />
             <element signature="e#2907#2948#0" />
-            <element signature="e#2953#4761#0" />
             <element signature="e#3382#4506#1" />
             <element signature="e#3458#4496#1" />
             <element signature="e#3485#3634#1" />
@@ -505,7 +529,9 @@
             <element signature="e#5270#5505#1" />
             <element signature="e#5314#5355#1" />
             <element signature="e#5537#5755#0" />
+            <element signature="e#6130#6131#0" expanded="true" />
             <element signature="e#5815#5857#0" />
+            <element signature="e#6171#6172#0" expanded="true" />
             <element signature="e#5862#7436#0" />
             <element signature="e#5955#6142#1" />
             <element signature="e#6147#6209#1" />
@@ -521,24 +547,41 @@
             <element signature="e#8246#9792#1" />
             <element signature="e#8275#9757#0" />
             <element signature="e#9835#9879#0" />
+            <element signature="e#10227#10228#0" expanded="true" />
             <element signature="e#9926#10013#0" />
+            <element signature="e#10313#10314#0" expanded="true" />
+            <element signature="e#10348#10349#0" expanded="true" />
             <element signature="e#10047#10137#0" />
+            <element signature="e#10437#10438#0" expanded="true" />
+            <element signature="e#10473#10474#0" expanded="true" />
             <element signature="e#10172#10230#0" />
+            <element signature="e#10530#10531#0" expanded="true" />
+            <element signature="e#10566#10567#0" expanded="true" />
             <element signature="e#10265#10325#0" />
+            <element signature="e#10625#10626#0" expanded="true" />
             <element signature="e#10387#10441#1" />
+            <element signature="e#10716#10717#0" expanded="true" />
             <element signature="e#10479#10534#1" />
-            <element signature="e#10572#10802#1" />
-            <element signature="e#10638#10716#1" />
-            <element signature="e#10720#10792#1" />
-            <element signature="e#11202#11293#0" />
-            <element signature="e#11316#11376#0" />
-            <element signature="e#11565#11660#1" />
-            <element signature="e#11665#11754#1" />
+            <element signature="e#10809#10810#0" expanded="true" />
+            <element signature="e#10644#10705#0" />
+            <element signature="e#10741#10819#1" />
+            <element signature="e#10823#10895#1" />
             <element signature="e#11833#11928#1" />
             <element signature="e#11933#12022#1" />
+            <element signature="e#13980#14029#1" />
+            <element signature="e#14033#14080#1" />
+            <element signature="e#14154#14203#1" />
+            <element signature="e#14208#14253#1" />
             <element signature="e#13951#14039#1" />
             <element signature="e#14044#14126#1" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mandelbrot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
