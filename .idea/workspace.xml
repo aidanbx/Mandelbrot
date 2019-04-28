@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63efb228-ab49-49d7-948c-b829cae5e980" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Mandelbrot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Mandelbrot.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,8 +23,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Mandelbrot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="112" column="28" selection-start-line="112" selection-start-column="28" selection-end-line="112" selection-end-column="28" />
+            <state relative-caret-position="217">
+              <caret line="126" column="22" selection-start-line="126" selection-start-column="22" selection-end-line="126" selection-end-column="22" />
               <folding>
                 <element signature="e#1138#1300#0" />
                 <element signature="e#1209#1252#1" />
@@ -50,7 +51,9 @@
                 <element signature="e#5612#5847#1" />
                 <element signature="e#5656#5697#1" />
                 <element signature="e#5879#6097#0" />
+                <element signature="e#6307#6308#0" expanded="true" />
                 <element signature="e#6130#6172#0" />
+                <element signature="e#6348#6349#0" expanded="true" />
                 <element signature="e#6177#7751#0" />
                 <element signature="e#6270#6457#1" />
                 <element signature="e#6462#6524#1" />
@@ -66,10 +69,20 @@
                 <element signature="e#8547#10093#1" />
                 <element signature="e#8576#10058#0" />
                 <element signature="e#10136#10180#0" />
+                <element signature="e#10406#10407#0" expanded="true" />
                 <element signature="e#10227#10314#0" />
+                <element signature="e#10492#10493#0" expanded="true" />
+                <element signature="e#10527#10528#0" expanded="true" />
                 <element signature="e#10348#10438#0" />
+                <element signature="e#10616#10617#0" expanded="true" />
+                <element signature="e#10652#10653#0" expanded="true" />
                 <element signature="e#10473#10531#0" />
+                <element signature="e#10709#10710#0" expanded="true" />
+                <element signature="e#10745#10746#0" expanded="true" />
                 <element signature="e#10566#10626#0" />
+                <element signature="e#10804#10805#0" expanded="true" />
+                <element signature="e#11064#11065#0" expanded="true" />
+                <element signature="e#11157#11158#0" expanded="true" />
                 <element signature="e#10816#15654#0" />
                 <element signature="e#10866#11566#0" />
                 <element signature="e#10967#11053#1" />
@@ -198,11 +211,6 @@
               <item name="Mandelbrot" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mandelbrot" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Mandelbrot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mandelbrot" type="462c0819:PsiDirectoryNode" />
-              <item name="Saved" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -301,7 +309,7 @@
       <workItem from="1556296850748" duration="5988000" />
       <workItem from="1556400733785" duration="12995000" />
       <workItem from="1556414254785" duration="7097000" />
-      <workItem from="1556434237728" duration="3758000" />
+      <workItem from="1556434237728" duration="11384000" />
     </task>
     <task id="LOCAL-00001" summary="Pretty well off rendering fullscreen">
       <created>1556416462556</created>
@@ -317,11 +325,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556434505604</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="dOnE">
+      <created>1556440213392</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1556440213392</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124142000" />
+    <option name="totallyTimeSpent" value="131768000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -334,16 +349,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49887133" visible="true" weight="0.19248827" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49887133" visible="true" weight="0.19248827" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24949698" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" sideWeight="0.5011287" side_tool="true" weight="0.25754526" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49899396" visible="true" weight="0.36350778" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49899396" weight="0.36350778" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -373,7 +387,8 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="Pretty well off rendering fullscreen" />
     <MESSAGE value="Saving Files works" />
-    <option name="LAST_COMMIT_MESSAGE" value="Saving Files works" />
+    <MESSAGE value="dOnE" />
+    <option name="LAST_COMMIT_MESSAGE" value="dOnE" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
@@ -494,8 +509,8 @@
     <entry file="file://$PROJECT_DIR$/Mandelbrot/Magic/Mandelbrot.java" />
     <entry file="file://$PROJECT_DIR$/Mandelbrot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="112" column="28" selection-start-line="112" selection-start-column="28" selection-end-line="112" selection-end-column="28" />
+        <state relative-caret-position="217">
+          <caret line="126" column="22" selection-start-line="126" selection-start-column="22" selection-end-line="126" selection-end-column="22" />
           <folding>
             <element signature="e#1138#1300#0" />
             <element signature="e#1209#1252#1" />
@@ -522,7 +537,9 @@
             <element signature="e#5612#5847#1" />
             <element signature="e#5656#5697#1" />
             <element signature="e#5879#6097#0" />
+            <element signature="e#6307#6308#0" expanded="true" />
             <element signature="e#6130#6172#0" />
+            <element signature="e#6348#6349#0" expanded="true" />
             <element signature="e#6177#7751#0" />
             <element signature="e#6270#6457#1" />
             <element signature="e#6462#6524#1" />
@@ -538,10 +555,20 @@
             <element signature="e#8547#10093#1" />
             <element signature="e#8576#10058#0" />
             <element signature="e#10136#10180#0" />
+            <element signature="e#10406#10407#0" expanded="true" />
             <element signature="e#10227#10314#0" />
+            <element signature="e#10492#10493#0" expanded="true" />
+            <element signature="e#10527#10528#0" expanded="true" />
             <element signature="e#10348#10438#0" />
+            <element signature="e#10616#10617#0" expanded="true" />
+            <element signature="e#10652#10653#0" expanded="true" />
             <element signature="e#10473#10531#0" />
+            <element signature="e#10709#10710#0" expanded="true" />
+            <element signature="e#10745#10746#0" expanded="true" />
             <element signature="e#10566#10626#0" />
+            <element signature="e#10804#10805#0" expanded="true" />
+            <element signature="e#11064#11065#0" expanded="true" />
+            <element signature="e#11157#11158#0" expanded="true" />
             <element signature="e#10816#15654#0" />
             <element signature="e#10866#11566#0" />
             <element signature="e#10967#11053#1" />
@@ -622,6 +649,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
