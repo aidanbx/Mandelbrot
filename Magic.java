@@ -14,8 +14,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.DecimalFormat;
 
-public class Mandelbrot extends PApplet {
-    private static double wScale = 3, hScale = 2;
+public class Magic extends PApplet {
+    private static double wScale = 3.840, hScale = 2.160;
     private static double viewWidth = 3840, viewHeight = 2160,scl=.75, res = 3, dscl = 2;
     //    private BigDecimal scl = new BigDecimal(1);
     private static double maxIter = 200;
