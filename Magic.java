@@ -1,3 +1,4 @@
+
 import processing.core.PApplet;
 import processing.core.PImage;
 import processing.event.MouseEvent;
@@ -13,18 +14,17 @@ import java.nio.file.Paths;
 import java.text.DecimalFormat;
 
 public class Magic extends PApplet {
-    private static double wScale = 3.840, hScale = 2.16;
+    private static double wScale = 3.84, hScale = 2.16;
     private static double viewWidth = 3840, viewHeight = 2160, scl = 1, res = 3, dscl = 2;
     //    private BigDecimal scl = new BigDecimal(1);
     private static double maxIter = 200;
-    private static double rg1 = 1, rg2 = 1, rg3 = 1;
-    private static double hue = 1, sat = 1, bri = 1, renderTime = 0, cxVal, cyVal;
+    private static double scl1 = 1, scl2 = 1, rg3 = 1;
+    private static double hue = 1, sat = 10, bri = 10, renderTime = 0, cxVal, cyVal;
     private static double rendPX = viewWidth / 2, rendPY = viewHeight / 2;
     private static double juX = 0, juY = 0, mnX = 0, mnY = 0, fromGif = 0, toGif = 0;
     private static boolean drawMandel = true, moveImage = false, wheelie = false;
     private static PImage output;
-    private static float imgScale = 1, imgRX = 5, imgRY = 1, oldMX = 0, oldMY = 0;
-    private static String eq;
+    private static double imgScale = 1, maxDist = 5, imgRY = 1, oldMX = 0, oldMY = 0;
     private static final DateFormat dateFormat = new SimpleDateFormat("EEE_MMM_d_h'h'mm'm'ss's'_a");
 
     public static void main(String[] args) {
@@ -54,23 +54,22 @@ public class Magic extends PApplet {
     }
 
     public void draw() {
-        noFill();
-        stroke(255);
 /*        if(drawMandel){
             rect(0,0,(float)viewWidth,(float)viewHeight);
         }else{
             rect(1920,0,(float)viewWidth,(float)viewHeight);
         }*/
-
         if (keyPressed) {
+            noFill();
+            stroke(255);
             colorMode(RGB, 255);
             fill(115, 150);
             rect(0, 0, 400, 600);
             fill(255);
             text(updateStats(), 10, 20);
             colorMode(HSB, 255);
+            noStroke();
         }
-        colorMode(RGB, 255);
 /*        stroke(0,255,0);
         line(0,height/2,width,height/2);
         line(width/2,0,width/2,height);
@@ -103,7 +102,7 @@ public class Magic extends PApplet {
 //            juY = imagY(rendPY);
 //            render(juX, juY, scl, false);
 //        } else {
-        if (!keyPressed) {
+
             rendPX = transX(mouseX);
             rendPY = transY(mouseY);
             if (!drawMandel) {
@@ -116,7 +115,7 @@ public class Magic extends PApplet {
                 juY = imagY(rendPY);
                 render(juX, juY, scl, false);
             }
-        }
+
 
 //        }
 
@@ -127,15 +126,12 @@ public class Magic extends PApplet {
         render(cx, cy, scale, julia, false, 0, 0);
     }
 
-    private void render(double cx, double cy, double scale, boolean julia, boolean justSave) {
-        render(cx, cy, scale, julia, justSave, 0, 0);
-    }
-
     private void render(double cx, double cy, double scale, boolean julia, boolean justSave, double rpx, double rpy) {
         render(cx, cy, scale, julia, justSave, rpx, rpy, true);
     }
 
     private void render(double cx, double cy, double scale, boolean julia, boolean justSave, double rpx, double rpy, boolean stats) {
+        background(0,0,0,0);
         colorMode(HSB, 255);
         char bar[], unfilled[];
         if (stats)
@@ -147,6 +143,7 @@ public class Magic extends PApplet {
 
         int loaded = 0;
         for (double i = -nXPix / 2; i < nXPix / 2; i++) {
+            redraw();
             for (double j = -nYPix / 2; j < nYPix / 2; j++) {
                 if (julia) {
                     iter = iterate(cx + (i / (nXPix / 2)) * (wScale / scale / 2), cy + (j / (nYPix / 2)) * (hScale / scale / 2));
@@ -155,17 +152,25 @@ public class Magic extends PApplet {
                 }
 
                 if (iter > 0) {
+
                     output.pixels[(int) (i + nXPix / 2) + (int) ((j + nYPix / 2) * nXPix)] =
                             //color((float)((255%(iter))),(float)(150*sat),(float)(150*bri));
-                            color((float) (hue * 113 * (sin(radians(150+iter * 10)) + 1)), (float) (sat * 150 * (iter / Math.abs(iter))), (float) (bri * 150 * (iter / Math.abs(iter))));
+                            (color((float) (hue * 113 * (sin(radians((float)(bri+iter*sat))) + 1)),
+                                    (float) (100 * 150 * (iter / Math.abs(iter))),
+                                    (float) (100 * 150 * (iter / Math.abs(iter)))));
+                   // fill(color((float) (hue * 113 * (sin(radians(100+iter*5)) + 1)),
+                           // (float) (sat * 150 * (iter / Math.abs(iter))),
+                           // (float) (bri * 150 * (iter / Math.abs(iter)))));
                 } else {
                     output.pixels[(int) (i + nXPix / 2) + (int) ((j + nYPix / 2) * nXPix)] =
-                            color(0);
+                            color(0,0);
                 }
+                //rect((float)((i+nXPix/2)*res),(float)((j+nYPix/2)*res),(float)res,(float)res);
+
 //                output.pixels[(int)(i+nXPix/2)+(int)((j+nYPix/2)*nXPix)] = iter;
 //                rect((float) ((i + nXPix / 2) * res), (float) ((j + nYPix / 2) * res), (float) res, (float) res)
             }
-            {
+            if(stats){
                 loaded = (int) (20 * ((i + nXPix / 2) / nXPix));
                 bar = new char[loaded];
                 unfilled = new char[20 - loaded];
@@ -174,10 +179,10 @@ public class Magic extends PApplet {
                 print("[" + new String(bar) + new String(unfilled) + "] " + 5 * loaded + "% \r");
             }
         }
-        bar = new char[20];
-        Arrays.fill(bar, '=');
-        print("[" + new String(bar) + "] " + "100%\r");
         if (stats) {
+            bar = new char[20];
+            Arrays.fill(bar, '=');
+            print("[" + new String(bar) + "] " + "100%\r");
             println();
         }
         output.updatePixels();
@@ -187,24 +192,24 @@ public class Magic extends PApplet {
         scl = scale;
         textSize(20);
         fill(255);
-        println();
-        if (stats) {
+        if (stats){
+            println();
             renderTime = millis() - startTimer;
             println(updateStats());
         }
 //        iterateRM(cx,cy);
     }
-
+    private static String eq = "            double zx2 = ((zx * zx) - (zy * zy));\n" +
+            "            double zy2 = (2 * zx * zy);\n" +
+            "            double zx3 = (zx * zx2 - zy * zy2);\n" +
+            "            double zy3 = (zx * zy2)+(zy*zx2);\n" +
+            "            zx="+scl1+"*zx2+(cx);\n" +
+            "            zy="+scl2+"*zy2+(cy);";
     private int iterateM(double cx, double cy) {
-        eq = "            double zx2 = ((zx * zx) - (zy * zy));\n" +
-                "            double zy2 = (2 * zx * zy);\n" +
-                "            double zx3 = (zx * zx2 - zy * zy2);\n" +
-                "            double zy3 = (zx * zy2)+(zy*zx2);\n" +
-                "            zx=zx2+(cx);\n" +
-                "            zy=zy2+(cy);";
+
         double zx = 0, zy = 0;
         for (int i = 1; i < maxIter; i++) {
-            if (dist(cx, cy, zx, zy) > imgRX) {
+            if (dist(cx, cy, zx, zy) > maxDist) {
                 return i;
             }
            /* double zx1 = (zx * zx - zy * zy) + cx;
@@ -215,92 +220,28 @@ public class Magic extends PApplet {
             double zy2 = (2 * zx * zy);
             double zx3 = (zx * zx2 - zy * zy2);
             double zy3 = (zx * zy2) + (zy * zx2);
-            zx = rg1 * zx2 + (cx);
-            zy = rg2 * zy2 + (cy);
+            zx = scl1*zx2 + (cx);
+            zy = scl2*zy2 + (cy);
 
         }
         return -1;
     }
 
-    /*private int iterateRM(double cx, double cy) {
-        double zx = 0, zy = 0;
-        stroke(255);
-        noFill();
-        ellipse((float)realX(cx),(float)realY(cy),(float)maxIter,(float)maxIter);
-        for (int i = 1; i < maxIter; i++) {
-            if (dist(cx, cy, zx, zy) > 5) {
-                return i;
-            }
-            double zx1 = (zx * zx - zy * zy) + cx;
-            double zy1 = (2 * zx * zy) + cy;
-            line((float)(realX(zx1)),(float)(realY(zy1)),(float)(realX(zx)),(float)(realY(zy)));
-            ellipse((float)(realX(zx1)),(float)(realY(zy1)),(float)((maxIter/i)),(float)((maxIter/i)));
-            zx = zx1;
-            zy = zy1;
-        }
-        return -1;
-    }*/
-    /*private int iterateM(double cx, double cy) {
-        double zx = 0, zy = 0;
-        for (int i = 1; i < maxIter; i++) {
-            if (dist(cx, cy, zx, zy) > 5) {
-                return i;
-            }
-            double zx1 = zy + cx;
-            double zy1 = zx + cy;
-            zx = zx1;
-            zy = zy1;
-        }
-        return -1;
-    }*//*
-    private int iterateMR(double cx, double cy) {
-        double zx = 0, zy = 0;
-        stroke(255);
-        noFill();
-        ellipse((float)cx,(float)cy,100,100);
-        println("---------------------",transX(realX(cx)),realY(cy)," vs ", transX(rendPX),rendPY);
-        for (int i = 1; i < maxIter; i++) {
-            if (dist(cx, cy, zx, zy) > 5) {
-                return i;
-            }
-            double zx1 = zy + cx;
-            double zy1 = zx + cy;
-            ellipse((float)transX(realX(cx)),realY(cy),100,100);
-//            line((float)transX(realX(zx1)),(float)transY(realY(zy1)),(float)transX(realX(zx)),(float)transY(realY(zy)));
-//            ellipse((float)transX(realX(zx1)),(float)transY(realY(zy1)),(float)(100+100*(i/maxIter)),(float)(100+100*(i/maxIter)));
-            zx = zx1;
-            zy = zy1;
-        }
-        noStroke();
-
-        return -1;
-    }*/
     private int iterate(double zx, double zy) {
         double cx = juX, cy = juY;
         for (int i = 1; i < maxIter; i++) {
-            if (dist(cx, cy, zx, zy) > imgRX) {
+            if (dist(cx, cy, zx, zy) > maxDist) {
                 return i;
             }
             double zx2 = ((zx * zx) - (zy * zy));
             double zy2 = (2 * zx * zy);
             double zx3 = (zx * zx2 - zy * zy2);
             double zy3 = (zx * zy2) + (zy * zx2);
-            zx = zx2 + (cx);
-            zy = zy2 + (cy);
+            zx = scl1*zx2 + (cx);
+            zy = scl2*zy2 + (cy);
 
         }
         return -1;
-        /*double cx = juX, cy = juY;
-        for (int i = 1; i < maxIter; i++) {
-            if (dist(cx, cy, zx, zy) > 5) {
-                return i;
-            }
-            double zx1 = (zx * zx - zy * zy) + cx;
-            double zy1 = (2 * zx * zy) + cy;
-            zx = zx1;
-            zy = zy1;
-        }
-        return -1;*/
 
     }
 
@@ -344,159 +285,55 @@ public class Magic extends PApplet {
                 "(1,z)H: " + df.format(hue) + "\n" +
                 "(2,x)S: " + df.format(sat) + "\n" +
                 "(3,c)B: " + df.format(bri) + "\n" +
-                "(5,b?)sz: " + df.format(imgRX) + "\n" +
+                "(5,b)maxDist: " + df.format(maxDist) + "\n\n" +
 
-                "(1,z)rg1: " + df.format(rg1) + "\n" +
-                "(2,x)rg2: " + df.format(rg2) + "\n" +
+                "(1,z)scl1: " + df.format(scl1) + "\n" +
+                "(2,x)scl2: " + df.format(scl2) + "\n" +
                 "(3,c)rg3: " + df.format(rg3) + "\n" +
-                "(5,b?)rng: " + df.format(imgRX) + "\n" +
-/*                "(5,b)rg1: "+ df.format(rg1)+"\n"+
-                "(6,n)rg2: "+ df.format(rg2)+"\n"+
+/*                "(5,b)scl1: "+ df.format(scl1)+"\n"+
+                "(6,n)scl2: "+ df.format(scl2)+"\n"+
                 "(7,m)rg3: "+ df.format(rg3)+"\n"+*/
                 "renderPoint: (" + df.format(rendPX) + " + " + df.format(rendPY) + "i)" + "\n" +
                 "chaos at RP : " + iter + "\n" +
                 "-----------");
     }
 
-    private String toFile() {
-        String juul;
-        if (drawMandel) {
-            juul = "true\n0\n0";
-        } else {
-            juul = "false\n" + juX + "\n" + juY;
-        }
-        return (scl + "\n" +
-                res + "\n" +
-                maxIter + "\n" +
-                juul + "\n" +
-                hue + "\n" +
-                sat + "\n" +
-                bri + "\n" +
-/*                "(5,b)rg1: "+ (rg1)+"\n"+
-                "(6,n)rg2: "+ (rg2)+"\n"+
-                "(7,m)rg3: "+ (rg3)+"\n"+*/
-                rendPX + "\n" +
-                rendPY + "\n" +
-                dscl + "\n" +
-                fromGif + "\n" +
-                toGif + "\n" +
-                imgRX + "\n" +
-                eq);
-    }
-
-    private static void fromFile(String file) {
-        try {
-            Scanner input = new Scanner(new File(System.getProperty("user.dir") + "\\Saved\\" + file));
-            int cnt = 0;
-            while (input.hasNextLine()) {
-                switch (cnt) {
-                    case (0):
-                        scl = Double.parseDouble(input.nextLine());
-                        break;
-                    case (1):
-                        res = Double.parseDouble(input.nextLine());
-                        break;
-                    case (2):
-                        maxIter = Double.parseDouble(input.nextLine());
-                        break;
-                    case (3):
-                        drawMandel = Boolean.parseBoolean(input.nextLine());
-                        break;
-                    case (4):
-                        juX = Double.parseDouble(input.nextLine());
-                        break;
-                    case (5):
-                        juY = Double.parseDouble(input.nextLine());
-                        break;
-                    case (6):
-                        hue = Double.parseDouble(input.nextLine());
-                        break;
-                    case (7):
-                        sat = Double.parseDouble(input.nextLine());
-                        break;
-                    case (8):
-                        bri = Double.parseDouble(input.nextLine());
-                        break;
-                    case (9):
-                        rendPX = Double.parseDouble(input.nextLine());
-                        break;
-                    case (10):
-                        rendPY = Double.parseDouble(input.nextLine());
-                        break;
-                    case (11):
-                        dscl = Double.parseDouble(input.nextLine());
-                    default:
-                        input.nextLine();
-                }
-                cnt++;
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-
-
-    }
-
-    private double newX(double x) {
-        return ((rendPX + ((x - viewWidth / 2) / scl)) - viewWidth / 2) * (wScale / viewWidth);
-    }
-
-    private double newY(double y) {
-        return (((rendPY + (y - viewHeight / 2) / scl)) - viewHeight / 2) * (hScale / viewHeight);
-    }
-
-    private double imagX(double x) {
-        return (x - viewWidth / 2) * (wScale / viewWidth);
-    }
-
-    private double imagY(double y) {
-        return (y - viewHeight / 2) * (hScale / viewHeight);
-    }
-
-    private double realX(double x) {
-        return ((viewWidth / 2) + (x / (wScale / viewWidth))) - scl * (rendPX - viewWidth / 2);
-    }
-
-    private double realY(double y) {
-        return ((viewHeight / 2) + (y / (hScale / viewHeight))) - scl * (rendPY - viewHeight / 2);
-    }
-
-    private double transX(double x) {
-        return (rendPX + ((x - viewWidth / 2) / scl));
-    }
-
-    private double transY(double y) {
-        return ((rendPY + (y - viewHeight / 2) / scl));
-    }
-
     private boolean createGif(double minI, double maxI, double minS, double maxS, double step) {
         String date = dateFormat.format(new Date());
         String loc = "" + System.getProperty("user.dir") + "\\Saved\\" + date + "_gif\\";
+
         int loaded = 0;
         char bar[], unfilled[];
-        maxIter = minI;
-        double svScl = scl, dsclGif = Math.pow((maxS / minS), 1 / ((maxI - minI) / step));
+
+        double svScl = scl /*,dsclGif = Math.pow((maxS / minS), 1 / ((maxI - minI) / step))*/;
         int fileno = 0;
+        int steps = (int)((maxI-minI)/step);
+        double x1=Math.log(minS),x2=Math.log(maxS);
+
+        maxIter = minI;
         scl = minS;
         fromGif = minI;
         toGif = maxI;
         for (double i = minI; i < maxI; i += step) {
+
+            maxIter+= step;
+//            rendPX+=(step);
+            double x = x1+(fileno*((x2-x1)/steps));
+            scl=Math.pow(Math.E,x);
+
             {
                 loaded = (int) (100 * ((i - minI) / step) / ((maxI - minI) / step));
                 bar = new char[loaded];
                 unfilled = new char[100 - loaded];
                 Arrays.fill(bar, '=');
                 Arrays.fill(unfilled, ' ');
-                print("[" + new String(bar) + new String(unfilled) + "] " + loaded + "% \r");
+                print("[" + new String(bar) + new String(unfilled) + "] " + loaded + "%\r");
             }
 
-            maxIter += step;
-            scl *= dsclGif;
-
             if (i == minI) {
-                saveCurr(date, true);
+                saveCurr(date + "_gif\\"+date, true,false);
             } else {
-                saveCurr(date + "_gif\\scale_" + (100000 + fileno), false);
+                saveCurr(date + "_gif\\scale_" + (100000 + fileno), false,false);
             }
             fileno++;
         }
@@ -509,7 +346,8 @@ public class Magic extends PApplet {
                     "cmd.exe", "/c", "cd \"" + loc + "\" &&" +
                     " magick convert *.tiff " + date + ".gif" + " &&" +
                     " del *.tiff &&" +
-                    " move *.gif " + System.getProperty("user.dir") + "\\Saved\\");
+                    " move *.gif " + System.getProperty("user.dir") + "\\Saved\\ &&" +
+                    " move *.txt " + System.getProperty("user.dir") + "\\Saved\\");
             builder.redirectErrorStream(true);
             Process p = builder.start();
             BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
@@ -530,11 +368,11 @@ public class Magic extends PApplet {
         return true;
     }
 
-    private String saveCurr(String name, boolean savetxt) {
+    private String saveCurr(String name, boolean savetxt,boolean stats) {
         if (drawMandel) {
-            render(imagX(rendPX), imagY(rendPY), scl, false, true, 0, 0, false);
+            render(imagX(rendPX), imagY(rendPY), scl, false, true, 0, 0, stats);
         } else {
-            render(imagX(rendPX), imagY(rendPY), scl, true, true, 0, 0, false);
+            render(imagX(rendPX), imagY(rendPY), scl, true, true, 0, 0, stats);
         }
         output.save(System.getProperty("user.dir") + "\\Saved\\" + name + ".tiff");
         if (savetxt) {
@@ -630,7 +468,7 @@ public class Magic extends PApplet {
                 println("saving @res " + viewWidth / res + "x" + viewHeight / res + "........");
 
                 String date = dateFormat.format(new Date());
-                saveCurr(date, true);
+                saveCurr(date, true,true);
                 println("saved!\n" + System.getProperty("user.dir") + "\\Saved\\" + date + ".tiff/.txt");
                 break;
             case ('p'):
@@ -667,7 +505,7 @@ public class Magic extends PApplet {
                 bri = 1;
                 rendPX = viewWidth / 2;
                 rendPY = viewHeight / 2;
-                imgRX = 5;
+                maxDist = 5;
                 imgRY = 0;
                 scl = 1;
                 imgScale = 1;
@@ -709,16 +547,16 @@ public class Magic extends PApplet {
                 break;
 
             case ('5'):
-                rg1 += +0.1;
+                scl1 += +0.1;
                 break;
             case ('b'):
-                rg1 -= 0.1;
+                scl1 -= 0.1;
                 break;
             case ('6'):
-                rg2 += +0.1;
+                scl2 += +0.1;
                 break;
             case ('n'):
-                rg2 -= 0.1;
+                scl2 -= 0.1;
                 break;
             case ('7'):
                 rg3 += +0.1;
@@ -727,10 +565,10 @@ public class Magic extends PApplet {
                 rg3 -= 0.1;
                 break;
             case ('4'):
-                imgRX *= dscl;
+                maxDist += 0.1;
                 break;
             case ('v'):
-                imgRX /= dscl;
+                maxDist -= 0.1;
                 break;
 
 
@@ -760,5 +598,117 @@ public class Magic extends PApplet {
             default:
                 break;
         }
+    }
+
+    private String toFile() {
+        String juul;
+        if (drawMandel) {
+            juul = "true\n0\n0";
+        } else {
+            juul = "false\n" + juX + "\n" + juY;
+        }
+        return (scl + "\n" +
+                res + "\n" +
+                maxIter + "\n" +
+                juul + "\n" +
+                hue + "\n" +
+                sat + "\n" +
+                bri + "\n" +
+/*                "(5,b)scl1: "+ (scl1)+"\n"+
+                "(6,n)scl2: "+ (scl2)+"\n"+
+                "(7,m)rg3: "+ (rg3)+"\n"+*/
+                rendPX + "\n" +
+                rendPY + "\n" +
+                dscl + "\n" +
+                fromGif + "\n" +
+                toGif + "\n" +
+                maxDist + "\n" +
+                eq);
+    }
+
+    private static void fromFile(String file) {
+        try {
+            Scanner input = new Scanner(new File(System.getProperty("user.dir") + "\\Saved\\" + file));
+            int cnt = 0;
+            while (input.hasNextLine()) {
+                switch (cnt) {
+                    case (0):
+                        scl = Double.parseDouble(input.nextLine());
+                        break;
+                    case (1):
+                        res = Double.parseDouble(input.nextLine());
+                        break;
+                    case (2):
+                        maxIter = Double.parseDouble(input.nextLine());
+                        break;
+                    case (3):
+                        drawMandel = Boolean.parseBoolean(input.nextLine());
+                        break;
+                    case (4):
+                        juX = Double.parseDouble(input.nextLine());
+                        break;
+                    case (5):
+                        juY = Double.parseDouble(input.nextLine());
+                        break;
+                    case (6):
+                        hue = Double.parseDouble(input.nextLine());
+                        break;
+                    case (7):
+                        sat = Double.parseDouble(input.nextLine());
+                        break;
+                    case (8):
+                        bri = Double.parseDouble(input.nextLine());
+                        break;
+                    case (9):
+                        rendPX = Double.parseDouble(input.nextLine());
+                        break;
+                    case (10):
+                        rendPY = Double.parseDouble(input.nextLine());
+                        break;
+                    case (11):
+                        dscl = Double.parseDouble(input.nextLine());
+                    default:
+                        input.nextLine();
+                }
+                cnt++;
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    private double newX(double x) {
+        return ((rendPX + ((x - viewWidth / 2) / scl)) - viewWidth / 2) * (wScale / viewWidth);
+    }
+
+    private double newY(double y) {
+        return (((rendPY + (y - viewHeight / 2) / scl)) - viewHeight / 2) * (hScale / viewHeight);
+    }
+
+    private double imagX(double x) {
+        return (x - viewWidth / 2) * (wScale / viewWidth);
+    }
+
+    private double imagY(double y) {
+        return (y - viewHeight / 2) * (hScale / viewHeight);
+    }
+
+    private double realX(double x) {
+        return (x/(wScale / viewWidth))+viewWidth/2;
+        //return ((viewWidth / 2) + (x / (wScale / viewWidth))) - scl * (rendPX - viewWidth / 2);
+    }
+
+    private double realY(double y) {
+        return ((viewHeight / 2) + (y / (hScale / viewHeight))) - scl * (rendPY - viewHeight / 2);
+    }
+
+    private double transX(double x) {
+        return (rendPX + ((x - viewWidth / 2) / scl));
+    }
+
+    private double transY(double y) {
+        return ((rendPY + (y - viewHeight / 2) / scl));
     }
 }
