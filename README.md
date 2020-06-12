@@ -3,7 +3,9 @@
   
 ## TODO:
 Add example outputs
+
 Create setup/run/install script
+
 Document Processing Usage
 
 ### Notes:
