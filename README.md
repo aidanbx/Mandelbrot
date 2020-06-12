@@ -1,15 +1,21 @@
 # Mandelbrot
-Rendering of the Mandelbrot and Julia sets.
+## Rendering of the Mandelbrot and Julia sets.
+  
+## TODO:
+Add example outputs
+Create setup/run/install script
+Document Processing Usage
 
-controls are very janky but powerful
+### Notes:
+Controls are janky but powerful
 
-run with -Xmx8G or other memory size when dealing with large images (resolution <1)
+Run with -Xmx8G or other memory size when dealing with large images (resolution <1)
 
-must have processing-core.jar added to classpath
+Must have processing-core.jar added to classpath
 
-pass output file.txt in cmd to load from that save
+Pass output file.txt in cmd to load from that save
 
------controls-----
+## Controls
 
 click to render centered at that point
 
