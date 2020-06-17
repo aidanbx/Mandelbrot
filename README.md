@@ -1,9 +1,11 @@
 # Mandelbrot
 ## Rendering of the Mandelbrot and Julia sets.
 
-![alt text][logo]
+![alt text](https://github.com/abarbieu/Mandelbrot/blob/master/demo.gif "julia set as more iterations are computed")
 
-[logo]: https://github.com/abarbieu/Mandelbrot/blob/master/demo.gif "julia set as more iterations are computed"
+![alt text](https://github.com/abarbieu/Mandelbrot/blob/master/J_zoom-and-iter.gif "Julia set zoom")
+
+![alt text](https://github.com/abarbieu/Mandelbrot/blob/master/M_zoom-and-iter.gif "Mandelbrot set zoom and iterate")
 
 ## TODO:
 Add example outputs
