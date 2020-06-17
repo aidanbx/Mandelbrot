@@ -1,6 +1,6 @@
 # Mandelbrot
 ## Rendering of the Mandelbrot and Julia sets.
-  
+![alt text][2019.05.09_20`08`31.gif "julia set as more iterations are computed"]
 ## TODO:
 Add example outputs
 
