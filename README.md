@@ -3,7 +3,7 @@
 
 ![alt text][logo]
 
-[logo]: https://github.com/abarbieu/Mandelbrot/demo.gif "julia set as more iterations are computed"
+[logo]: https://github.com/abarbieu/Mandelbrot/blob/master/demo.gif "julia set as more iterations are computed"
 
 ## TODO:
 Add example outputs
