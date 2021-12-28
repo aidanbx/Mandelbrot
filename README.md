@@ -1,6 +1,8 @@
 # Mandelbrot
 ## Rendering of the Mandelbrot and Julia sets.
 
+This project has been largeley focused on efficiently applying a function to a large set of variables, though it could be improved with linear algebra and GPU processing. The secondary motivation was to create a practical way to create, interact with, and save renderings of fractals; as I haven't found a utility that does that.
+
 ![alt text](https://github.com/abarbieu/Mandelbrot/blob/master/demo.gif "julia set as more iterations are computed")
 
 ![alt text](https://github.com/abarbieu/Mandelbrot/blob/master/J_zoom-and-iter.gif "Julia set zoom")
